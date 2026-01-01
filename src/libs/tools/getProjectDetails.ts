@@ -4,7 +4,7 @@ import { mdFileReader } from "../mdFileReader";
 import * as path from 'path';
 
 export const getProjectDetails = tool({
-    description: "Get a specific project details by project name",
+    description: "Get a specific project details by its name",
     inputSchema: z.object({
         projectName: z.string().describe('the project name'),
     }),

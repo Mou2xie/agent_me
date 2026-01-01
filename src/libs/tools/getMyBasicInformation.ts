@@ -4,7 +4,7 @@ import * as path from 'path';
 import { mdFileReader } from "../mdFileReader";
 
 export const getMyBasicInformation = tool({
-    description: ' Get my basic information, like name, age, gender, contact info, education, personal brief etc.',
+    description: ' Get my basic information, including name, age, gender, contact info, education background, personal brief introduction.',
     inputSchema: z.object().describe('No input needed'),
     execute: () => mdFileReader(path.join(process.cwd(), 'src', 'assets', 'myBasicInformation.md')),
 });

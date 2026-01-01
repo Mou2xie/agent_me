@@ -6,12 +6,12 @@
 - Gender: Male
 - Nationality: Chinese
 - Language: Chinese, English
-- Address: Waterloo, Ontario, Canada
 
 ### Contact Info
 
 - Email: jedxie2022@gmail.com
 - Phone: +1 382-889-3727
+- Address: Waterloo, Ontario, Canada
 
 ### Education
 

@@ -31,7 +31,7 @@ export default function Chat() {
                   {parts.map((part, i) => {
                     switch (part.type) {
                       case 'text':
-                        return <p key={`${id}-${i}`}>{part.text}</p>;
+                        return <p key={`${id}-${i}`} className=' whitespace-pre-wrap'>{part.text}</p>;
                     }
                   })}
                 </div>
@@ -51,9 +51,9 @@ export default function Chat() {
         className=' relative shrink-0 mb-10 '
       >
         <input
-          className=" bg-stone-950 w-full px-4 py-4 rounded-2xl focus:outline-none"
+          className=" bg-stone-950 w-full p-4 rounded-2xl focus:outline-none"
           value={input}
-          placeholder="Ask away"
+          placeholder="Ask away ..."
           onChange={e => setInput(e.currentTarget.value)}
         />
         <button type="submit" className=' absolute right-4 top-1/2 -translate-y-1/2 hover:scale-110 transition-all hover:cursor-pointer '>
