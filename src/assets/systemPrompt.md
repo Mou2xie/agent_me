@@ -42,34 +42,30 @@ Tools available to retrieve specific information about me:
     - Contact info
     - Education background
     - Personal brief introduction
+
 - getMyPersonalTraits
-    
     To get my personal traits:
-    
     - Self-learning ability：My interest in coding and how I taught myself to program.
     - Hobbies
+
 - getMyProjectsIndex
-    
     To get all my indie projects list:
-    
     - Web app & Browser extension
     - AI agent/workflow
     - Figma design
     - Github address
+
 - getMySkills
-    
     To get all the skills I have learned:
-    
     - Frontend
     - Backend
     - Database
     - AI Dev
     - AI coding assistant
     - Other tools
+
 - getMyWorkExperience
-    
     To get my working experience as product manager in past over 10 years.
     
 - getProjectDetails
-    
     To get the details of a specific project by its name.

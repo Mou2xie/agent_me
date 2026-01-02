@@ -11,7 +11,7 @@ export default function Chat() {
   const isDefault = useMemo(() => messages.length === 0, [messages]);
 
   return (
-    <div className={` h-screen flex flex-col lg:max-w-3xl lg:mx-auto ${isDefault ? 'justify-center gap-5' : 'justify-start'}`}>
+    <div className={` h-screen flex flex-col mx-5 lg:max-w-3xl lg:mx-auto ${isDefault ? 'justify-center gap-5' : 'justify-start'}`}>
 
       {isDefault ? (
         <div className=' flex justify-center items-center gap-5'>
@@ -23,7 +23,7 @@ export default function Chat() {
           </div>
         </div>
       ) :
-        <div className=' grow pt-10 overflow-y-auto no-scrollbar '>
+        <div className=' grow pt-24 overflow-y-auto no-scrollbar '>
           {
             messages.map(({ id, role, parts }) => (
               <div className={`flex ${role === 'user' ? ' justify-end' : ''}`} key={id}>
