@@ -3,17 +3,23 @@
 import Image from 'next/image';
 import { useChat } from '@ai-sdk/react';
 import { useMemo, useState } from 'react';
+import { DefaultChatTransport } from 'ai';
 
 export default function Chat() {
 
   const [input, setInput] = useState('');
-  const { messages, sendMessage } = useChat();
+  const { messages, sendMessage } = useChat({
+    transport: new DefaultChatTransport({
+      api: '/api/chat',
+    })
+  });
   const isDefault = useMemo(() => messages.length === 0, [messages]);
 
   return (
     <div className={` h-screen flex flex-col mx-5 lg:max-w-3xl lg:mx-auto ${isDefault ? 'justify-center gap-5' : 'justify-start'}`}>
 
       {isDefault ? (
+        // default state
         <div className=' flex justify-center items-center gap-5'>
           <Image src="/avatar.svg" alt="avatar" width={300} height={300} className=' lg:hidden w-[80px] h-[80px]' />
           <Image src="/me.png" alt="Logo" width={300} height={300} className=' hidden lg:block lg:w-[250px] lg:h-[250px]' />
@@ -23,6 +29,7 @@ export default function Chat() {
           </div>
         </div>
       ) :
+        // chat list
         <div className=' grow pt-24 overflow-y-auto no-scrollbar '>
           {
             messages.map(({ id, role, parts }) => (

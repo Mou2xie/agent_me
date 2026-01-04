@@ -1,5 +1,5 @@
-import { createOpenRouter } from "@openrouter/ai-sdk-provider";
-import { ToolLoopAgent } from "ai";
+import { createAgent } from "langchain";
+import { ChatOpenAI } from "@langchain/openai";
 import { getSystemPrompt } from "./getSystemPrompt";
 
 // tools
@@ -10,19 +10,24 @@ import { getMyWorkExperience } from './tools/getMyWorkExperience';
 import { getProjectDetails } from './tools/getProjectDetails';
 import { getMyPersonalTraits } from './tools/getMyPersonalTraits';
 
-const openRouter = createOpenRouter({
+
+const model = new ChatOpenAI({
+    model: 'google/gemini-3-flash-preview',
     apiKey: process.env.OPENROUTER_API_KEY,
+    configuration: {
+        baseURL: 'https://openrouter.ai/api/v1'
+    }
 });
 
-export const agent = new ToolLoopAgent({
-    model: openRouter.chat('google/gemini-3-flash-preview'),
-    instructions: getSystemPrompt(),
-    tools: {
+export const agent = createAgent({
+    model,
+    systemPrompt: getSystemPrompt(),
+    tools: [
         getMyBasicInformation,
         getMyProjectsIndex,
         getMySkills,
         getMyWorkExperience,
         getProjectDetails,
         getMyPersonalTraits,
-    },
-});
+    ],
+})
