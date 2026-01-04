@@ -22,10 +22,10 @@ export default function Chat() {
         // default state
         <div className=' flex justify-center items-center gap-5'>
           <Image src="/avatar.svg" alt="avatar" width={300} height={300} className=' lg:hidden w-[80px] h-[80px]' />
-          <Image src="/me.png" alt="Logo" width={300} height={300} className=' hidden lg:block lg:w-[250px] lg:h-[250px]' />
+          <Image src="/hero.png" alt="Logo" width={300} height={300} className=' hidden lg:block lg:w-[250px] lg:h-[250px] rounded-2xl' />
           <div className=' lg:mt-10 space-y-1'>
             <h1 className=' text-3xl lg:text-5xl font-anton text-text-highlight '>Hello, my friend</h1>
-            <p className=' lg:text-xl'>I'm digital agent of Yong Xie, glad to chat with you.</p>
+            <p className=' lg:text-xl'>I'm digital version of Yong Xie, glad to chat with you.</p>
           </div>
         </div>
       ) :
