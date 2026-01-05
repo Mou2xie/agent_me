@@ -4,10 +4,14 @@ import Image from 'next/image';
 import { useChat } from '@ai-sdk/react';
 import { useMemo, useState } from 'react';
 import { DefaultChatTransport } from 'ai';
+import { useSearchParams } from 'next/navigation'
 
 export default function Chat() {
 
-  const [input, setInput] = useState('');
+  const searchParams = useSearchParams();
+  const question = searchParams.get('q');
+
+  const [input, setInput] = useState(question || '');
   const { messages, sendMessage } = useChat({
     transport: new DefaultChatTransport({
       api: '/api/chat',
