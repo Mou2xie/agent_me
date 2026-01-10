@@ -15,6 +15,7 @@ const projectMap: Record<string, string> = {
     'n8n Tender Document Generator': 'tendordocumentgenerator.md',
     'n8n Fortune Generator': 'fortune.md',
     'n8n Google Trends Keywords Tool': 'googletrendkeywords.md',
+    'Agent Yong':' agentyong.md',
 };
 
 export const getProjectDetails = tool(

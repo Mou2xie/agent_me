@@ -2,26 +2,27 @@
 
 1. LingoPick
 AI-powered Word Translator & Vocabulary Builder
+**This project is my 'Gold Medal' project.**
 
-2. speakingpass.com
+1. speakingpass.com
 IELTS speaking test topic bank
 
-3. Transider
+1. Transider
 Free En-Ch in-page translator working in browser sidepanel
 
-4. horoscopechinois.today
+1. horoscopechinois.today
 Online Chinese traditional astrology
 
-5. grokani.love
+1. grokani.love
 Guide book for building affection with Ani
 
-6. molibb.baby
+1. molibb.baby
 Cross gate account manager
 
-7. yongxie.dev
+1. yongxie.dev
 Personal website
 
-8. Hu-Landscaping
+1. Hu-Landscaping
 Landscaping company landing page building for my client
 
 ### AI Agent/Workflow
@@ -35,11 +36,14 @@ Generate poetry fortunes for horoscopechinois.today
 3. n8n Google Trends Keywords Tool
 Find product idea from Google Trends keywords
 
+4. Agent Yong
+Online version of me, chatting with recruiters or hiring managers for me
+
 ### Figma Design
 I have some figma designs, visit the link below to see them:
 https://yongxie.dev/portfolio
 
 ### Github
 
-33 repositories and 24 of them are public, visit the link below to see them:
+30+ repositories and 20+ of them are public, visit the link below to see them:
 https://github.com/Mou2xie

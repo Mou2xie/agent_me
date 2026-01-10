@@ -12,26 +12,40 @@ export default function ChatContent() {
     const question = searchParams.get('q');
 
     const [input, setInput] = useState(question || '');
-    const { messages, sendMessage } = useChat({
+    const { messages, sendMessage,status } = useChat({
         transport: new DefaultChatTransport({
             api: '/api/chat',
         })
     });
     const isDefault = useMemo(() => messages.length === 0, [messages]);
+    const isLoading = useMemo(() => status === 'submitted', [status]);
+
+    const handleQuickQuestion = (question: string) => {
+        sendMessage({ text: question });
+    };
 
     return (
         <div className={` h-screen flex flex-col mx-5 lg:max-w-3xl lg:mx-auto ${isDefault ? 'justify-center gap-5' : 'justify-start'}`}>
 
             {isDefault ? (
                 // default state
-                <div className=' flex justify-center items-center gap-5'>
-                    <Image src="/avatar.svg" alt="avatar" width={300} height={300} className=' lg:hidden w-[80px] h-[80px]' />
-                    <Image src="/hero.png" alt="Logo" width={300} height={300} className=' hidden lg:block lg:w-[250px] lg:h-[250px] rounded-2xl' />
-                    <div className=' lg:mt-10 space-y-1'>
-                        <h1 className=' text-3xl lg:text-5xl font-anton text-text-highlight '>Hello, my friend</h1>
-                        <p className=' lg:text-xl'>I'm digital version of Yong Xie, glad to chat with you.</p>
+                <>
+                    <div className=' flex justify-center items-center gap-5'>
+                        <Image src="/avatar.svg" alt="avatar" width={300} height={300} className=' lg:hidden w-[80px] h-[80px]' />
+                        <Image src="/hero.png" alt="Logo" width={300} height={300} className=' hidden lg:block lg:w-[250px] lg:h-[250px] rounded-2xl' />
+                        <div className=' lg:mt-10 space-y-1'>
+                            <h1 className=' text-3xl lg:text-5xl font-anton text-text-highlight '>Hello, my friend</h1>
+                            <p className=' lg:text-xl'>I'm digital version of Yong Xie, glad to chat with you.</p>
+                        </div>
                     </div>
-                </div>
+                    <div className=' flex gap-3 mt-3 text-accent-green text flex-wrap'>
+                        <button type="button" onClick={() => handleQuickQuestion('Do a brief introduction about yourself.')} className=' px-3 border border-accent-green rounded-full hover:bg-[#243626] hover:cursor-pointer'>Brief Intro </button>
+                        <button type="button" onClick={() => handleQuickQuestion('Tell me about your personal traits.')} className=' px-3 border border-accent-green rounded-full hover:bg-[#243626] hover:cursor-pointer'>Personal Traits</button>
+                        <button type="button" onClick={() => handleQuickQuestion('Tell me about your PM and tech background and how you transitioned between roles.')} className=' px-3 border border-accent-green rounded-full hover:bg-[#243626] hover:cursor-pointer'>PM & Tech Background</button>
+                        <button type="button" onClick={() => handleQuickQuestion('Showcase all your projects and do a brief description of each of them')} className=' px-3 border border-accent-green rounded-full hover:bg-[#243626] hover:cursor-pointer'>Showcase Projects</button>
+                        <button type="button" onClick={() => handleQuickQuestion('What is your tech stack and key technical skills?')} className=' px-3 border border-accent-green rounded-full hover:bg-[#243626] hover:cursor-pointer'>Key Technical Skills</button>
+                    </div>
+                </>
             ) :
                 // chat list
                 <div className=' grow pt-24 overflow-y-auto no-scrollbar '>
@@ -49,6 +63,13 @@ export default function ChatContent() {
                             </div>
                         ))
                     }
+                    {isLoading && (
+                        <div className=' flex gap-2 my-3'>
+                            <div className=' w-2 h-2 bg-accent-green rounded-full animate-bounce'></div>
+                            <div className=' w-2 h-2 bg-accent-green rounded-full animate-bounce' style={{ animationDelay: '0.2s' }}></div>
+                            <div className=' w-2 h-2 bg-accent-green rounded-full animate-bounce' style={{ animationDelay: '0.4s' }}></div>
+                        </div>
+                    )}
                 </div>
             }
 
