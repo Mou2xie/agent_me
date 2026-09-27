@@ -1,6 +1,6 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { Anton, Roboto_Flex } from "next/font/google";
-import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
 
