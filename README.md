@@ -48,7 +48,7 @@ The reader only returns Markdown files inside `src/assets/knowledge/`; it resolv
 - **Application:** Next.js 16 App Router, React 19, TypeScript, Tailwind CSS 4
 - **Agent:** LangChain.js, Zod-validated tool input
 - **Chat streaming:** Vercel AI SDK and `@ai-sdk/langchain`
-- **Model access:** OpenRouter through `@langchain/openai`; the current model ID is configured in `src/libs/agent.ts`
+- **Model access:** [DeepSeek V4.1 Flash](https://openrouter.ai/deepseek/deepseek-v4.1-flash) through OpenRouter and `@langchain/openai` (`deepseek/deepseek-v4.1-flash` in `src/libs/agent.ts`)
 - **Knowledge base:** Local Markdown files and an index loaded into the agent prompt
 
 ## Run locally

@@ -21,7 +21,7 @@ Agent Yong is Yongjie Xie's independently built conversational portfolio for rec
 - Connected the chat API route to a LangChain.js agent and streamed responses to the React client through the Vercel AI SDK and `@ai-sdk/langchain`.
 - Loaded a knowledge index alongside the system prompt. The index describes available Markdown records, and the agent can select and read full documents on demand before answering detailed questions.
 - Provided one Zod-validated `knowledgeReader` tool. It accepts document paths from the index and restricts reads to Markdown files within `src/assets/knowledge/`, including a check of resolved paths and symlinks.
-- Configured `deepseek/deepseek-v4-flash-0731` through OpenRouter in the reviewed implementation. The prompt instructs the agent to answer in the visitor's language and ground specific claims in retrieved records.
+- Configured `deepseek/deepseek-v4.1-flash` through OpenRouter in the current repository. The prompt instructs the agent to answer in the visitor's language and ground specific claims in retrieved records. The 2026-09-29 project source record reviewed the earlier `deepseek/deepseek-v4-flash-0731` configuration.
 
 ## Status and technical boundaries
 

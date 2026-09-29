@@ -24,7 +24,7 @@ npm start
 - **AI Orchestration:** LangChain.js + Vercel AI SDK
 - **Styling:** Tailwind CSS v4
 - **Validation:** Zod
-- **LLM Provider:** OpenRouter (Google Gemini Flash)
+- **LLM Provider:** OpenRouter (DeepSeek V4.1 Flash)
 
 ## Code Style Guidelines
 
