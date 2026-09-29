@@ -15,7 +15,7 @@ source_refs:
   - "Resume/Facts/Projects/Tender Master.md"
   - "Resume/Facts/Projects/NovaAgent.md"
   - "Resume/Facts/Projects/Fix My City.md"
-source_snapshot: "2026-09-21"
+source_snapshot: "2026-09-29"
 visibility: public
 ---
 
@@ -39,7 +39,7 @@ This is a navigation overview of the public Markdown knowledge base. Each entry 
 |---|---|---|
 | `transider` | [Transider](knowledge/projects/transider.md) | Chrome extension for contextual translation and vocabulary collection; includes personal extension architecture and a dated usage figure. Read for browser-extension work. |
 | `speakingpass` | [SpeakingPass](knowledge/projects/speakingpass.md) | IELTS Speaking preparation site with a Next.js and Supabase content architecture and a dated usage figure. Read for full-stack web, content, or SEO implementation. |
-| `agent-yong` | [Agent Yong](knowledge/projects/agentYong.md) | Conversational portfolio at `yongxie.dev`, using Markdown-grounded tools in the supplied implementation snapshot. Read for this application's product idea and recorded v1 architecture. |
+| `agent-yong` | [Agent Yong](knowledge/projects/agentYong.md) | Conversational portfolio at `agentyong.chat`, using an indexed Markdown knowledge base and one on-demand reading tool. Read for this application's product idea and current agentic RAG architecture. |
 | `lingopick` | [LingoPick](knowledge/projects/lingoPick.md) | AI vocabulary extension with premium membership and Gumroad integration; development and operation stopped. Read for extension, AI translation, or product-experiment questions. |
 | `molibb` | [molibb.baby](knowledge/projects/molibb.md) | Local-first Cross Gate account-management tool built for a friend. Read for Next.js, IndexedDB, or AI-assisted delivery examples. |
 | `horoscope-chinois` | [horoscopechinois.today](knowledge/projects/horoscopeChinois.md) | French-language Chinese-astrology content site with a Supabase-backed publishing workflow. Read for independent content-site work. |
