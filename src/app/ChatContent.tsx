@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useChat } from '@ai-sdk/react';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { DefaultChatTransport } from 'ai';
 import { useSearchParams } from 'next/navigation'
 
@@ -26,7 +26,28 @@ export default function ChatContent() {
     const isDefault = messages.length === 0;
     const isLoading = status === 'submitted' || status === 'streaming';
 
+    // Keep the message list pinned to the bottom while the user is already there
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+    const isPinnedToBottomRef = useRef(true);
+
+    const scrollToBottom = () => {
+        const container = scrollContainerRef.current;
+        if (container) container.scrollTop = container.scrollHeight;
+    };
+
+    const handleScroll = () => {
+        const container = scrollContainerRef.current;
+        if (!container) return;
+        const distanceFromBottom = container.scrollHeight - container.scrollTop - container.clientHeight;
+        isPinnedToBottomRef.current = distanceFromBottom < 40;
+    };
+
+    useEffect(() => {
+        if (isPinnedToBottomRef.current) scrollToBottom();
+    }, [messages, isLoading]);
+
     const handleQuickQuestion = (question: string) => {
+        isPinnedToBottomRef.current = true;
         sendMessage({ text: question });
     };
 
@@ -54,7 +75,7 @@ export default function ChatContent() {
                 </>
             ) :
                 // chat list
-                <div className=' grow pt-24 overflow-y-auto no-scrollbar '>
+                <div ref={scrollContainerRef} onScroll={handleScroll} className=' grow pt-24 overflow-y-auto no-scrollbar '>
                     {
                         messages.map(({ id, role, parts }) => (
                             <div className={`flex ${role === 'user' ? ' justify-end' : ''}`} key={id}>
@@ -83,6 +104,7 @@ export default function ChatContent() {
                 onSubmit={e => {
                     e.preventDefault();
                     if (!input.trim()) return;
+                    isPinnedToBottomRef.current = true;
                     sendMessage({ text: input });
                     setInput('');
                 }}
