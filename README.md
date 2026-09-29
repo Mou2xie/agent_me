@@ -1,8 +1,8 @@
-# Agent Me - Digital Avatar of Yong Xie
+# Agent Yong - Digital Avatar of Yongjie Xie
 
-> "Hello, my friend. I'm the digital agent of Yong Xie, glad to chat with you."
+> "Hello, my friend. I'm the digital agent of Yongjie Xie, glad to chat with you."
 
-**Agent Me** is an interactive AI-powered portfolio application. Instead of a static resume, it allows recruiters and hiring managers to have a natural conversation with my "digital twin" to learn about my background, skills, projects, and product thinking.
+**Agent Yong** is an interactive AI-powered portfolio application. Instead of a static resume, it allows recruiters and hiring managers to have a natural conversation with my "digital twin" to learn about my background, skills, projects, and product thinking.
 
 ## 📖 Introduction
 
@@ -10,7 +10,7 @@
 Traditional resumes and static portfolios often fail to capture the full depth of a candidate's personality, thought processes, and specific problem-solving abilities. Recruiters sift through hundreds of documents, often missing the unique value a candidate brings.
 
 ### The Solution
-**Agent Me** bridges this gap by offering an **interactive experience**. It leverages Large Language Models (LLMs) to answer questions dynamically, showcasing my technical skills in AI engineering and my product mindset in creating user-centric solutions.
+**Agent Yong** bridges this gap by offering an **interactive experience**. It leverages Large Language Models (LLMs) to answer questions dynamically, showcasing my technical skills in AI engineering and my product mindset in creating user-centric solutions.
 
 ### My Role & Thinking
 As a Product Manager turned Developer, I built this to demonstrate:
@@ -78,4 +78,4 @@ Follow these steps to run the project locally:
 
 ---
 
-*Built with ❤️ by Yong Xie*
+*Built with ❤️ by Yongjie Xie*

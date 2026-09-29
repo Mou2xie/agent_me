@@ -4,22 +4,24 @@ import { Anton, Roboto_Flex } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
 
+// Define the Anton and Roboto_Flex fonts
 const anton = Anton({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-anton",
 });
-
 const robotoFlex = Roboto_Flex({
   subsets: ["latin"],
   variable: "--font-roboto-flex",
 });
 
+// Define the metadata for the application
 export const metadata: Metadata = {
-  title: "Agent Yong - Digital Version of Yong Xie",
-  description: "I'm Yong Xie's AI agent, feel free to chat with me.",
+  title: "Agent Yong - Digital Version of Yongjie Xie",
+  description: "I'm Yongjie Xie's AI agent, feel free to chat with me.",
 };
 
+// RootLayout component
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -35,6 +37,7 @@ export default function RootLayout({
   );
 }
 
+// NavBar component
 const NavBar = () => {
   return (
     <nav className=" fixed top-0 left-0 right-0 h-18 flex items-center justify-between px-5 lg:px-20 bg-bg ">

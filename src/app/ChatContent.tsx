@@ -2,23 +2,29 @@
 
 import Image from 'next/image';
 import { useChat } from '@ai-sdk/react';
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import { DefaultChatTransport } from 'ai';
 import { useSearchParams } from 'next/navigation'
 
 export default function ChatContent() {
 
+    // Get the search params from the URL
     const searchParams = useSearchParams();
     const question = searchParams.get('q');
 
+    // State to hold the input value
     const [input, setInput] = useState(question || '');
-    const { messages, sendMessage,status } = useChat({
+
+    // Initialize the chat hook with the default transport
+    const { messages, sendMessage, status } = useChat({
         transport: new DefaultChatTransport({
             api: '/api/chat',
         })
     });
-    const isDefault = useMemo(() => messages.length === 0, [messages]);
-    const isLoading = useMemo(() => status === 'submitted', [status]);
+
+    // Determine the page state based on the messages and status
+    const isDefault = messages.length === 0;
+    const isLoading = status === 'submitted' || status === 'streaming';
 
     const handleQuickQuestion = (question: string) => {
         sendMessage({ text: question });
@@ -35,7 +41,7 @@ export default function ChatContent() {
                         <Image src="/hero.png" alt="Logo" width={300} height={300} className=' hidden lg:block lg:w-[250px] lg:h-[250px] rounded-2xl' />
                         <div className=' lg:mt-10 space-y-1'>
                             <h1 className=' text-3xl lg:text-5xl font-anton text-text-highlight '>Hello, my friend</h1>
-                            <p className=' lg:text-xl'>I'm digital version of Yong Xie, glad to chat with you.</p>
+                            <p className=' lg:text-xl'>I'm digital version of Yongjie Xie, glad to chat with you.</p>
                         </div>
                     </div>
                     <div className=' flex gap-3 mt-3 text-accent-green text flex-wrap'>
