@@ -8,7 +8,8 @@ source_refs:
   - "Resume/Facts/Claim Registry.md"
   - "Resume/Evidence/Career Pivot.md"
   - "Resume/Evidence/Soft Skills.md"
-source_snapshot: "2026-09-21"
+  - "Resume/Facts/Projects/Lighter.md"
+source_snapshot: "2026-11-10"
 visibility: public
 ---
 
@@ -29,6 +30,7 @@ visibility: public
 - Target roles: Applied AI Engineer, Generative AI Engineer, Full-Stack Developer, Web Developer, and Frontend Developer.
 - Focus: applying existing LLM capabilities to products and workflows through RAG, tool calling, agents, structured generation, APIs, and full-stack delivery.
 - Background: over a decade in product-management roles, followed by formal web and mobile development study and hands-on engineering projects.
+- Recent independent work: developed and published Lighter, a lightweight open-source TypeScript AI agent framework, alongside application projects such as Agent Yong. Lighter demonstrates core agent-runtime and library/API design work; see [its project record](projects/lighter.md) for implementation, publication, and AI-assistance scope.
 - Yongjie Xie describes his engineering career level as junior. His earlier product-management experience is a separate area of experience.
 - He reports holding a Canadian Post-Graduation Work Permit and being eligible to work in Canada without employer sponsorship within that permit's scope. This is a dated fact from the supplied records, not a guarantee about future authorization.
 
@@ -38,6 +40,7 @@ Yongjie Xie reports that he enjoys turning ideas into usable products and person
 
 - Before coming to Canada and attending Conestoga College, he independently studied HTML, CSS, JavaScript, Node.js, and databases while working in product roles.
 - During the diploma program, he completed the required coursework and independently studied Python and AI agent development.
+- In October 2026, he began Lighter after finding LangChain heavier than many of his use cases required. Inspired by Pi's simplicity, he used his first framework project to deepen his understanding of agent runtimes and build a small, extensible core.
 - His project-led approach is to identify what a product needs, learn the relevant technology, and apply it in an implementation. Self-study alone does not establish a proficiency level or production experience.
 
 ## Education

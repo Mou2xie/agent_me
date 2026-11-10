@@ -6,7 +6,8 @@ aliases: ["tech stack", "skills", "技术栈", "技能"]
 source_refs:
   - "Resume/Facts/Skills.md"
   - "Resume/Facts/Candidate.md"
-source_snapshot: "2026-09-21"
+  - "Resume/Facts/Projects/Lighter.md"
+source_snapshot: "2026-11-10"
 visibility: public
 ---
 
@@ -14,7 +15,7 @@ visibility: public
 
 ## Core strengths — Yongjie Xie's proficiency assessment
 
-- JavaScript and TypeScript: used across independent web projects, Agent Yong, Transider, SpeakingPass, and NovaAgent; JavaScript was also used for Polang Movies landing pages.
+- JavaScript and TypeScript: used across independent web projects, Lighter, Agent Yong, Transider, SpeakingPass, and NovaAgent; JavaScript was also used for Polang Movies landing pages.
 - Python: used for Tender Master's workflow and NovaAgent's FastAPI RAG service.
 - React and Next.js: used in Agent Yong, SpeakingPass, NovaAgent, and independent web projects.
 - React Router and TanStack Query: used in NovaAgent's frontend.
@@ -26,6 +27,7 @@ visibility: public
 - Client data and state: Zustand in NovaAgent and Transider; localforage/IndexedDB in Transider and LingoPick; Dexie.js/IndexedDB in molibb.baby.
 - Server-first web applications: React Server Components and Server Actions in SpeakingPass and horoscopechinois.today; dynamic metadata and build-time sitemap generation in SpeakingPass.
 - AI applications: LangChain.js, Vercel AI SDK, OpenRouter, and Zod in Agent Yong; document ingestion, embeddings, vector retrieval, and streaming API work in NovaAgent; Python LangGraph, Pydantic, and python-docx in Tender Master.
+- Agent framework and package delivery: primarily hand-coded Lighter's TypeScript/Node.js core runtime, model–tool loop, shared message contracts, Zod tool validation, async-generator streaming, and lifecycle hooks; published an ESM npm package with TypeScript declarations. OpenAI/Claude SDK adapters were AI-assisted; tests were AI-written, and the website/documentation were completed by AI. See [Lighter](projects/lighter.md) for scope and Alpha limitations; adapter code does not establish verified live-provider compatibility.
 - Backend and data: Supabase/PostgreSQL in several projects, Hono on Cloudflare Workers and FastAPI on Railway for NovaAgent, Express in the documented Fix My City moderation work, and Supabase Edge Functions/Deno for its issue triage.
 - Design and product tools: Figma for named design work; Notion for NovaAgent team planning. Design artifacts are evidence of design work, not by themselves proof of shipped code.
 

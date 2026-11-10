@@ -12,10 +12,11 @@ source_refs:
   - "Resume/Facts/Projects/Transider.md"
   - "Resume/Facts/Projects/SpeakingPass.md"
   - "Resume/Facts/Projects/Agent Yong.md"
+  - "Resume/Facts/Projects/Lighter.md"
   - "Resume/Facts/Projects/Tender Master.md"
   - "Resume/Facts/Projects/NovaAgent.md"
   - "Resume/Facts/Projects/Fix My City.md"
-source_snapshot: "2026-09-29"
+source_snapshot: "2026-11-10"
 visibility: public
 ---
 
@@ -37,6 +38,7 @@ This is a navigation overview of the public Markdown knowledge base. Each entry 
 
 | Document ID | Document | Overview and when to read |
 |---|---|---|
+| `lighter` | [Lighter](knowledge/projects/lighter.md) | Published lightweight TypeScript AI agent framework and npm package; core model–tool loop, Zod tools, streaming, hooks, and provider adapters. Read for the latest framework project, SDK/API design, open-source publishing, motivation, or AI-assisted development scope. |
 | `transider` | [Transider](knowledge/projects/transider.md) | Chrome extension for contextual translation and vocabulary collection; includes personal extension architecture and a dated usage figure. Read for browser-extension work. |
 | `speakingpass` | [SpeakingPass](knowledge/projects/speakingpass.md) | IELTS Speaking preparation site with a Next.js and Supabase content architecture and a dated usage figure. Read for full-stack web, content, or SEO implementation. |
 | `agent-yong` | [Agent Yong](knowledge/projects/agentYong.md) | Conversational portfolio at `agentyong.chat`, using an indexed Markdown knowledge base and one on-demand reading tool. Read for this application's product idea and current agentic RAG architecture. |

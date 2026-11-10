@@ -79,6 +79,8 @@ Open [http://localhost:3000](http://localhost:3000). Use `npm run build` to chec
 
 Edit or add a Markdown file under `src/assets/knowledge/`, then add or update its entry in `src/assets/knowledgeIndex.md` with the exact path relative to `src/assets/`. The agent uses the index to discover documents and `knowledgeReader` to read their full contents. Keep descriptions concise and put factual details in the linked document.
 
+The portfolio includes [Lighter](src/assets/knowledge/projects/lighter.md), Yongjie's independently developed and published lightweight TypeScript AI agent framework. Its record covers the core model–tool loop, tools, streaming, hooks, provider adapters, npm publication, and personal/AI-assisted contribution scope. Related introductions and technical evidence are maintained in [Profile](src/assets/knowledge/profile.md) and [Skills](src/assets/knowledge/skills.md). Lighter is a portfolio project; Agent Yong's current runtime uses LangChain as described above.
+
 ## Why this design
 
 The indexed Markdown corpus keeps portfolio facts reviewable and easy to update. Giving the agent a document-reading tool lets it choose material relevant to each question instead of placing every detailed record in the prompt. The trade-off is that retrieval depends on the model selecting the right documents, and the final answer still needs normal fact checking.
